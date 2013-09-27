@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="Gumby/css/gumby.css">
+    <style type="text/css">
+    .tab-nav {
+        margin-top: 20px !important;
+    }
+    .outer {
+      margin-top: 5%;
+    }
+    </style>
+ </head>
+ <body>
+  <header class="row">
+    <div class="outer"> 
+      <div class="twelve columns">
+      <h1>Your IP address is: {{ values['ip'] }}</h1>
+      </div>
+      <div 
+      <p>Some other information you may find useful:<p>
+      <table class="table">
+        <tbody>
+        {% for key, value in values.items() %}
+          <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </header>
+  <main class="row">
+  </main>
+</body>
+</html>
