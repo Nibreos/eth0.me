@@ -2,9 +2,6 @@
   <head>
     <link rel="stylesheet" type="text/css" href="Gumby/css/gumby.css">
     <style type="text/css">
-    .tab-nav {
-        margin-top: 20px !important;
-    }
     .outer {
       margin-top: 5%;
     }
@@ -12,19 +9,18 @@
  </head>
  <body>
   <header class="row">
-    <div class="outer"> 
-      <div class="twelve columns">
-      <h1>Your IP address is: {{ values['ip'] }}</h1>
-      </div>
-      <div 
-      <p>Some other information you may find useful:<p>
-      <table class="table">
-        <tbody>
+      <div class="row">
+        <div class="twelve columns">
+          <center><h1>Your IP address is: {{ values['ip'] }}</h1></center>
+          <center><h2>Some other information you may find useful</h2></center>
+        <table class="table">
+          <tbody>
         {% for key, value in values.items() %}
-          <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+            <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
         {% endfor %}
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
     </header>
   <main class="row">
